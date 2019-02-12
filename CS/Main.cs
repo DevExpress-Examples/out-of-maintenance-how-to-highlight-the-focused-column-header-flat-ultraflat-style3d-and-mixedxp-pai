@@ -6,12 +6,14 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using DevExpress.Utils;
+using DevExpress.XtraEditors;
+using DevExpress.XtraGrid.Views.BandedGrid;
 
-namespace WindowsApplication1
+namespace DXSample
 {
-    public partial class Form1 : Form
+    public partial class Main : XtraForm
     {
-        public Form1()
+        public Main()
         {
             InitializeComponent();
         }
@@ -20,12 +22,14 @@ namespace WindowsApplication1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'nwindDataSet.Customers' table. You can move, or remove it, as needed.
-            this.customersTableAdapter.Fill(this.nwindDataSet.Customers);
+            recordBindingSource.DataSource = DataHelper.GetData(10);
 
             style = new AppearanceObject();
             style.BackColor = Color.Orange;
             style.Options.UseBackColor = true;
+
+            //try different paint styles
+            //advBandedGridView1.PaintStyleName = "UltraFlat";
         }
 
         private void advBandedGridView1_FocusedColumnChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedColumnChangedEventArgs e)
@@ -36,10 +40,15 @@ namespace WindowsApplication1
 
         private void advBandedGridView1_CustomDrawColumnHeader(object sender, DevExpress.XtraGrid.Views.Grid.ColumnHeaderCustomDrawEventArgs e)
         {
-            if (e.Column == advBandedGridView1.FocusedColumn)
+            AdvBandedGridView view = sender as AdvBandedGridView;
+            if(e.Column == view.FocusedColumn) {
                 e.Appearance.Assign(style);
-            else
-                e.Appearance.Assign(advBandedGridView1.Appearance.HeaderPanel);
+                e.Info.AllowColoring = true;
+            }
+            else {
+                e.Info.AllowColoring = false;
+                e.Appearance.Assign(view.PaintAppearance.HeaderPanel);
+            }
         }
     }
 }
