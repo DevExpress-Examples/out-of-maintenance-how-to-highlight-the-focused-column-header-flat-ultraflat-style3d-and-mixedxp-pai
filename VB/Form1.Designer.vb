@@ -1,6 +1,4 @@
-Imports Microsoft.VisualBasic
-Imports System
-Namespace WindowsApplication1
+﻿Namespace WindowsApplication1
 	Partial Public Class Form1
 		''' <summary>
 		''' Required designer variable.
@@ -79,8 +77,10 @@ Namespace WindowsApplication1
 			Me.advBandedGridView1.Name = "advBandedGridView1"
 			Me.advBandedGridView1.OptionsView.ColumnAutoWidth = True
 			Me.advBandedGridView1.PaintStyleName = "UltraFlat"
-'			Me.advBandedGridView1.FocusedColumnChanged += New DevExpress.XtraGrid.Views.Base.FocusedColumnChangedEventHandler(Me.advBandedGridView1_FocusedColumnChanged);
-'			Me.advBandedGridView1.CustomDrawColumnHeader += New DevExpress.XtraGrid.Views.Grid.ColumnHeaderCustomDrawEventHandler(Me.advBandedGridView1_CustomDrawColumnHeader);
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.advBandedGridView1.FocusedColumnChanged += new DevExpress.XtraGrid.Views.Base.FocusedColumnChangedEventHandler(this.advBandedGridView1_FocusedColumnChanged);
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.advBandedGridView1.CustomDrawColumnHeader += new DevExpress.XtraGrid.Views.Grid.ColumnHeaderCustomDrawEventHandler(this.advBandedGridView1_CustomDrawColumnHeader);
 			' 
 			' gridBand1
 			' 
@@ -194,7 +194,8 @@ Namespace WindowsApplication1
 			Me.Controls.Add(Me.gridControl1)
 			Me.Name = "Form1"
 			Me.Text = "Form1"
-'			Me.Load += New System.EventHandler(Me.Form1_Load);
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.Load += new System.EventHandler(this.Form1_Load);
 			CType(Me.gridControl1, System.ComponentModel.ISupportInitialize).EndInit()
 			CType(Me.customersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
 			CType(Me.nwindDataSet, System.ComponentModel.ISupportInitialize).EndInit()
