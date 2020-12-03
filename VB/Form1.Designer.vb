@@ -1,6 +1,4 @@
-Imports Microsoft.VisualBasic
-Imports System
-Namespace WindowsApplication1
+﻿Namespace WindowsApplication1
 	Partial Public Class Form1
 		''' <summary>
 		''' Required designer variable.
@@ -28,7 +26,7 @@ Namespace WindowsApplication1
 			Me.components = New System.ComponentModel.Container()
 			Me.gridControl1 = New DevExpress.XtraGrid.GridControl()
 			Me.customersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-			Me.nwindDataSet = New nwindDataSet()
+			Me.nwindDataSet = New WindowsApplication1.nwindDataSet()
 			Me.advBandedGridView1 = New DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView()
 			Me.gridBand1 = New DevExpress.XtraGrid.Views.BandedGrid.GridBand()
 			Me.colCustomerID = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
@@ -43,7 +41,7 @@ Namespace WindowsApplication1
 			Me.colRegion = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
 			Me.colFax = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
 			Me.colPhone = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
-			Me.customersTableAdapter = New nwindDataSetTableAdapters.CustomersTableAdapter()
+			Me.customersTableAdapter = New WindowsApplication1.nwindDataSetTableAdapters.CustomersTableAdapter()
 			CType(Me.gridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
 			CType(Me.customersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
 			CType(Me.nwindDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -79,8 +77,10 @@ Namespace WindowsApplication1
 			Me.advBandedGridView1.Name = "advBandedGridView1"
 			Me.advBandedGridView1.OptionsView.ColumnAutoWidth = True
 			Me.advBandedGridView1.PaintStyleName = "UltraFlat"
-'			Me.advBandedGridView1.FocusedColumnChanged += New DevExpress.XtraGrid.Views.Base.FocusedColumnChangedEventHandler(Me.advBandedGridView1_FocusedColumnChanged);
-'			Me.advBandedGridView1.CustomDrawColumnHeader += New DevExpress.XtraGrid.Views.Grid.ColumnHeaderCustomDrawEventHandler(Me.advBandedGridView1_CustomDrawColumnHeader);
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.advBandedGridView1.FocusedColumnChanged += new DevExpress.XtraGrid.Views.Base.FocusedColumnChangedEventHandler(this.advBandedGridView1_FocusedColumnChanged);
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.advBandedGridView1.CustomDrawColumnHeader += new DevExpress.XtraGrid.Views.Grid.ColumnHeaderCustomDrawEventHandler(this.advBandedGridView1_CustomDrawColumnHeader);
 			' 
 			' gridBand1
 			' 
@@ -194,7 +194,8 @@ Namespace WindowsApplication1
 			Me.Controls.Add(Me.gridControl1)
 			Me.Name = "Form1"
 			Me.Text = "Form1"
-'			Me.Load += New System.EventHandler(Me.Form1_Load);
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.Load += new System.EventHandler(this.Form1_Load);
 			CType(Me.gridControl1, System.ComponentModel.ISupportInitialize).EndInit()
 			CType(Me.customersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
 			CType(Me.nwindDataSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -209,7 +210,7 @@ Namespace WindowsApplication1
 		Private WithEvents advBandedGridView1 As DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView
 		Private nwindDataSet As nwindDataSet
 		Private customersBindingSource As System.Windows.Forms.BindingSource
-		Private customersTableAdapter As nwindDataSetTableAdapters.CustomersTableAdapter
+		Private customersTableAdapter As WindowsApplication1.nwindDataSetTableAdapters.CustomersTableAdapter
 		Private colCustomerID As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
 		Private colCompanyName As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
 		Private colContactName As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
