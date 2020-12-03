@@ -28,7 +28,7 @@ Namespace WindowsApplication1
 			Me.components = New System.ComponentModel.Container()
 			Me.gridControl1 = New DevExpress.XtraGrid.GridControl()
 			Me.customersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-			Me.nwindDataSet = New WindowsApplication1.nwindDataSet()
+			Me.nwindDataSet = New nwindDataSet()
 			Me.advBandedGridView1 = New DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView()
 			Me.gridBand1 = New DevExpress.XtraGrid.Views.BandedGrid.GridBand()
 			Me.colCustomerID = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
@@ -43,7 +43,7 @@ Namespace WindowsApplication1
 			Me.colRegion = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
 			Me.colFax = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
 			Me.colPhone = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
-			Me.customersTableAdapter = New WindowsApplication1.nwindDataSetTableAdapters.CustomersTableAdapter()
+			Me.customersTableAdapter = New nwindDataSetTableAdapters.CustomersTableAdapter()
 			CType(Me.gridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
 			CType(Me.customersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
 			CType(Me.nwindDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -209,7 +209,7 @@ Namespace WindowsApplication1
 		Private WithEvents advBandedGridView1 As DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView
 		Private nwindDataSet As nwindDataSet
 		Private customersBindingSource As System.Windows.Forms.BindingSource
-		Private customersTableAdapter As WindowsApplication1.nwindDataSetTableAdapters.CustomersTableAdapter
+		Private customersTableAdapter As nwindDataSetTableAdapters.CustomersTableAdapter
 		Private colCustomerID As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
 		Private colCompanyName As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
 		Private colContactName As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
